@@ -13,6 +13,7 @@ api.interceptors.response.use(
   function (response) {
     if (response.data.response === 'error') {
       if ('error' in response.data) alert(response.data.error)
+      return { data: { results: [] } }
     }
     return response
   },

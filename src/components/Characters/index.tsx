@@ -1,17 +1,20 @@
 import { memo } from 'react'
 import { Character } from '../../service/superHero/types'
+import Card from '../Card'
 import { Section } from './styles'
 
 type CharactersProps = {
-  characters: Character[]
+  characters: Pick<Character, 'id' | 'name' | 'image' | 'biography'>[]
 }
 
 const Characters = ({ characters }: CharactersProps) => {
   const list = characters.map(character => (
-    <div key={character.id}>
-      nome: {character.name}, nomeCompleto: {character.biography['full-name']},
-      imagem: {character.image.url}
-    </div>
+    <Card
+      key={character.id}
+      title={character.name}
+      description={character.biography['full-name']}
+      url={character.image.url}
+    />
   ))
 
   return <Section>{list}</Section>

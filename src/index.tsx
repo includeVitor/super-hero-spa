@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import 'react-loading-skeleton/dist/skeleton.css'
 import App from './components/App'
 import reportWebVitals from './reportWebVitals'
 

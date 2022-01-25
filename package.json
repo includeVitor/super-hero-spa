@@ -55,9 +55,12 @@
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
+    "add": "^2.0.6",
     "axios": "^0.25.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.1",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "react-loading-skeleton": "^3.0.2",
+    "yarn": "^1.22.17"
   }
 }
