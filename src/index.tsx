@@ -2,11 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import 'react-loading-skeleton/dist/skeleton.css'
 import App from './components/App'
+import ErrorBoundary from './components/ErrorBoundary'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 )

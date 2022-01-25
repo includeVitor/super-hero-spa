@@ -1,9 +1,12 @@
-// intelligence: string
-// strength: string
-// speed: string
-// durability: string
-// power: string
-// combat: string
+enum PowerStatsEnum {
+  intelligence = 'intelligence',
+  strength = 'strength',
+  speed = 'speed',
+  durability = 'durability',
+  power = 'power',
+  combat = 'combat',
+  choose = 'choose'
+}
 
 interface PowerStats {
   [key: string]: string
@@ -64,4 +67,5 @@ interface ErrorResponse {
   error: string
 }
 
+export { PowerStatsEnum }
 export type { SuccessResponse, ErrorResponse, Character }

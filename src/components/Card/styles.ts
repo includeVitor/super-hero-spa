@@ -3,9 +3,19 @@ import styled from 'styled-components'
 const Article = styled.article`
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   padding: 1rem;
   max-width: 15rem;
-  max-height: 22rem;
+  height: 23rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 1rem;
+  border: solid 0.125rem grey;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `
 
 const Title = styled.span`
@@ -20,6 +30,7 @@ const Description = styled.span`
 const Image = styled.img`
   width: 15rem;
   height: 20rem;
+  border-radius: 1rem;
 `
 
 export { Article, Title, Description, Image }
