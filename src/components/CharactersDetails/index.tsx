@@ -11,7 +11,7 @@ type CharactersDetailsProps = {
 const CharactersDetails = ({ character }: CharactersDetailsProps) => {
   const navigate = useNavigate()
 
-  const handleClick = () => navigate(AppRoutes.HomePage, { replace: true })
+  const handleClick = () => navigate(AppRoutes.HomePage)
 
   return (
     <>

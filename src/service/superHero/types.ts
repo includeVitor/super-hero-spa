@@ -54,6 +54,7 @@ interface Character {
   work: Work
   connections: Connections
   image: Image
+  $selected?: boolean
 }
 
 interface SuccessResponse<T> {

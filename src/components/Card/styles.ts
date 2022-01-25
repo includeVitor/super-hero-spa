@@ -1,21 +1,24 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-const Article = styled.article`
+type ArticleProps = {
+  $selected?: boolean
+}
+
+const Article = styled.article<ArticleProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 1rem;
   max-width: 15rem;
-  height: 23rem;
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 1rem;
   border: solid 0.125rem grey;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.7;
-  }
+  ${props =>
+    props.$selected &&
+    css`
+      opacity: 0.7;
+    `}}
 `
 
 const Title = styled.span`
