@@ -37,4 +37,10 @@ const Image = styled.img`
   border-radius: 1rem;
 `
 
-export { Article, Title, Description, Image }
+const ButtonAlign = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+`
+
+export { Article, Title, Description, Image, ButtonAlign }

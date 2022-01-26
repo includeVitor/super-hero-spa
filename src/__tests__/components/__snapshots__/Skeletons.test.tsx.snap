@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeletons LoadingCharacters should match the snapshot 1`] = `
+<article
+  class="sc-bdvvtL kPhNLK"
+>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 15rem; height: 22rem;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+</article>
+`;

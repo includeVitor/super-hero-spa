@@ -46,7 +46,6 @@ const Home = () => {
 
   const handleCombat = useCallback((character: Character) => {
     character.$selected = !character.$selected
-
     setSelectedCharacters(prev => {
       if (character.$selected) {
         return [...prev, character]

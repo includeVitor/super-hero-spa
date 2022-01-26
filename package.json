@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/axios": "^0.14.0",
     "@types/react-router-dom": "^5.3.3",
     "add": "^2.0.6",

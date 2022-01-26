@@ -1,14 +1,14 @@
 import { memo, useCallback, useState } from 'react'
 import EmptyImage from '../EmptyImage'
-import { Article, Description, Image, Title } from './styles'
+import { Article, ButtonAlign, Description, Image, Title } from './styles'
 
 type CardProps = {
   title: string
   description?: string
   url: string
   $selected?: boolean
-  handleView?: () => any
-  handleCombat?: () => any
+  handleView?: () => void
+  handleCombat?: () => void
 }
 
 const Card = ({
@@ -35,16 +35,10 @@ const Card = ({
         <EmptyImage />
       )}
 
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          paddingTop: '8px'
-        }}
-      >
+      <ButtonAlign>
         {handleView && <button onClick={handleView}>View</button>}
         {handleCombat && <button onClick={handleCombat}>Combat</button>}
-      </div>
+      </ButtonAlign>
     </Article>
   )
 }
