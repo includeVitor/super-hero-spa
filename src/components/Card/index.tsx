@@ -8,7 +8,7 @@ type CardProps = {
   url: string
   $selected?: boolean
   handleView?: () => any
-  handleSelect?: () => any
+  handleCombat?: () => any
 }
 
 const Card = ({
@@ -17,7 +17,7 @@ const Card = ({
   url,
   $selected,
   handleView,
-  handleSelect
+  handleCombat
 }: CardProps) => {
   const [imgLoaded, setImgLoaded] = useState(true)
 
@@ -35,8 +35,16 @@ const Card = ({
         <EmptyImage />
       )}
 
-      {handleView && <button onClick={handleView}>View</button>}
-      {handleSelect && <button onClick={handleSelect}>Select</button>}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          paddingTop: '8px'
+        }}
+      >
+        {handleView && <button onClick={handleView}>View</button>}
+        {handleCombat && <button onClick={handleCombat}>Combat</button>}
+      </div>
     </Article>
   )
 }

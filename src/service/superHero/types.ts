@@ -69,4 +69,4 @@ interface ErrorResponse {
 }
 
 export { PowerStatsEnum }
-export type { SuccessResponse, ErrorResponse, Character }
+export type { SuccessResponse, ErrorResponse, Character, PowerStats }

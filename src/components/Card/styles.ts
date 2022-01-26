@@ -10,6 +10,7 @@ const Article = styled.article<ArticleProps>`
   justify-content: flex-end;
   padding: 1rem;
   max-width: 15rem;
+  max-height: 25rem;
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 1rem;
