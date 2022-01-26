@@ -3,15 +3,17 @@ import EmptyImage from '../EmptyImage'
 import { Article, ButtonAlign, Description, Image, Title } from './styles'
 
 type CardProps = {
+  id: string
   title: string
   description?: string
   url: string
   $selected?: boolean
-  handleView?: () => void
-  handleCombat?: () => void
+  handleView?: any
+  handleCombat?: any
 }
 
 const Card = ({
+  id,
   title,
   description,
   url,
@@ -36,8 +38,10 @@ const Card = ({
       )}
 
       <ButtonAlign>
-        {handleView && <button onClick={handleView}>View</button>}
-        {handleCombat && <button onClick={handleCombat}>Combat</button>}
+        {handleView && <button onClick={() => handleView(id)}>View</button>}
+        {handleCombat && (
+          <button onClick={() => handleCombat(id)}>Combat</button>
+        )}
       </ButtonAlign>
     </Article>
   )

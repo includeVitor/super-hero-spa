@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+<section
+  class="sc-gKclnd dSgoGw"
+>
+  <div
+    class="sc-iCfMLu guJtHI"
+  >
+    <article
+      class="sc-gsDKAQ kbitaU"
+    >
+      <span
+        class="sc-dkPtRN dUKHXj"
+      >
+        Batman
+      </span>
+      <span
+        class="sc-hKwDye iJFtxk"
+      >
+        Terry McGinnis
+      </span>
+      <img
+        class="sc-eCImPb iRoiIz"
+        src="https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg"
+      />
+      <div
+        class="sc-jRQBWg iLrlcE"
+      >
+        <button>
+          View
+        </button>
+        <button>
+          Combat
+        </button>
+      </div>
+    </article>
+  </div>
+  <div
+    class="sc-iCfMLu guJtHI"
+  >
+    <article
+      class="sc-gsDKAQ hUfPUh"
+    >
+      <span
+        class="sc-dkPtRN dUKHXj"
+      >
+        Batman
+      </span>
+      <span
+        class="sc-hKwDye iJFtxk"
+      >
+        Bruce Wayne
+      </span>
+      <img
+        class="sc-eCImPb iRoiIz"
+        src="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
+      />
+      <div
+        class="sc-jRQBWg iLrlcE"
+      >
+        <button>
+          View
+        </button>
+        <button>
+          Combat
+        </button>
+      </div>
+    </article>
+  </div>
+  <div
+    class="sc-iCfMLu guJtHI"
+  >
+    <article
+      class="sc-gsDKAQ hUfPUh"
+    >
+      <span
+        class="sc-dkPtRN dUKHXj"
+      >
+        Batman II
+      </span>
+      <span
+        class="sc-hKwDye iJFtxk"
+      >
+        Dick Grayson
+      </span>
+      <img
+        class="sc-eCImPb iRoiIz"
+        src="https://www.superherodb.com/pictures2/portraits/10/100/1496.jpg"
+      />
+      <div
+        class="sc-jRQBWg iLrlcE"
+      >
+        <button>
+          View
+        </button>
+        <button>
+          Combat
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
+`;

@@ -27,6 +27,7 @@ const Details = () => {
       <Section>
         <Card
           key={character.id}
+          id={character.id}
           title={character.name}
           description={character.biography['full-name']}
           url={character.image.url}

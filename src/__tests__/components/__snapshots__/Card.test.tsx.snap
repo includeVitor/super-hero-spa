@@ -1,6 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should match the snapshot 1`] = `
+exports[`Card should match the snapshot card not selected 1`] = `
+<article
+  class="sc-gsDKAQ hUfPUh"
+>
+  <span
+    class="sc-dkPtRN dUKHXj"
+  >
+    snapshot
+  </span>
+  <span
+    class="sc-hKwDye iJFtxk"
+  >
+    snapshot
+  </span>
+  <img
+    class="sc-eCImPb iRoiIz"
+    src=""
+  />
+  <div
+    class="sc-jRQBWg iLrlcE"
+  >
+    <button>
+      View
+    </button>
+    <button>
+      Combat
+    </button>
+  </div>
+</article>
+`;
+
+exports[`Card should match the snapshot card selected 1`] = `
 <article
   class="sc-gsDKAQ kbitaU"
 >

@@ -1,17 +1,13 @@
 import { ChangeEvent, useCallback, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import Card from '../../components/Card'
+import CardList from '../../components/CardList'
 import Input from '../../components/Input'
 import { LoadingCharacters } from '../../components/Skeletons'
 import { useDebounce } from '../../lib/hooks/useDebounce'
-import { sanatizePower, sumPowers } from '../../lib/utils'
-import { AppRoutes } from '../../route/types'
+import { sanatizePower } from '../../lib/utils'
 import { searchByName } from '../../service/superHero'
 import { Character, PowerStatsEnum } from '../../service/superHero/types'
-import { FightArticle, FightContainer, Section } from './styles'
 
 const Home = () => {
-  const navigate = useNavigate()
   const [inputs, setInputs] = useState({
     searchTerm: '',
     powerStats: PowerStatsEnum.choose
@@ -36,60 +32,6 @@ const Home = () => {
     setCharacters(data)
     setLoading(false)
   }, [debouncedTerm])
-
-  const handleView = useCallback(
-    (character: Character) => {
-      navigate(AppRoutes.Details, { replace: true, state: { character } })
-    },
-    [navigate]
-  )
-
-  const handleCombat = useCallback((character: Character) => {
-    character.$selected = !character.$selected
-    setSelectedCharacters(prev => {
-      if (character.$selected) {
-        return [...prev, character]
-      } else {
-        return prev.filter(p => {
-          return p.id !== character.id
-        })
-      }
-    })
-  }, [])
-
-  const cardList = characters.map(character => (
-    <Card
-      key={character.id}
-      title={character.name}
-      description={character.biography['full-name']}
-      url={character.image.url}
-      handleView={() => handleView(character)}
-      handleCombat={() => handleCombat(character)}
-      $selected={character.$selected}
-    />
-  ))
-
-  const fight = selectedCaracters.map(character => (
-    <FightArticle key={character.id}>
-      <ul>
-        <li>Total: {sumPowers(character.powerstats)}</li>
-        <li>Intelligence: {character.powerstats.intelligence}</li>
-        <li>Strength: {character.powerstats.strength}</li>
-        <li>Speed: {character.powerstats.speed}</li>
-        <li>Durability: {character.powerstats.durability}</li>
-        <li>Power: {character.powerstats.power}</li>
-        <li>Combat: {character.powerstats.combat}</li>
-      </ul>
-      <Card
-        title={character.name}
-        description={character.biography['full-name']}
-        url={character.image.url}
-        handleView={() => handleView(character)}
-        handleCombat={() => handleCombat(character)}
-        $selected={character.$selected}
-      />
-    </FightArticle>
-  ))
 
   useEffect(() => {
     if (debouncedTerm) {
@@ -153,10 +95,23 @@ const Home = () => {
       )}
 
       {selectedCaracters.length === 2 && (
-        <FightContainer>{fight}</FightContainer>
+        <CardList
+          characters={selectedCaracters}
+          setCharacters={setCharacters}
+          setSelectedCharacters={setSelectedCharacters}
+          $powerstats
+        />
       )}
 
-      {loading ? <LoadingCharacters /> : <Section>{cardList}</Section>}
+      {loading ? (
+        <LoadingCharacters />
+      ) : (
+        <CardList
+          characters={characters}
+          setCharacters={setCharacters}
+          setSelectedCharacters={setSelectedCharacters}
+        />
+      )}
     </>
   )
 }
